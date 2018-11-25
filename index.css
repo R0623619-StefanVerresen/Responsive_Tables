@@ -1,12 +1,12 @@
 @media only screen and (max-width: 760px),
 (max-device-width: 370px)  {
-    table, thead, tbody, th, td, tr {
-        display: block; 
+    
+    p{
+        font-size: 70%
     }
     
-    #headers{
-        display: none;
-        background-color: antiquewhite;
+    table, thead, tbody, th, td, tr {
+        display: block;
     }
     
     tr { 
@@ -17,22 +17,44 @@
         border-bottom: 1px solid #eee; 
         position: relative;
         padding-left: 50%;
+        padding-bottom: 20px;
+        padding-top: 30px;
     }
+    
+    #headers{
+        display: none;
+        background-color: antiquewhite;
+    }
+    
     td:before { 
         position: absolute;
         left: 2%;
         width: 50%; 
         font-weight: bold;
         font-size: 200%;
+    }
+    
 
+    
+    td:nth-of-type(1):before {
+        content: "MAANDAG / MONDAY"; 
+    }
+    
+    td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6){
+        display: none;
     }
 
+    /* Columns that could be assigned content (starts with 1)
+    
     td:nth-of-type(1):before { content: "Week 41"; }
     td:nth-of-type(2):before { content: "MAANDAG / MONDAY"; }
     td:nth-of-type(3):before { content: "DINSDAG / TUESDAY"; }
     td:nth-of-type(4):before { content: "WOENSDAG / WEDNESDAY"; }
     td:nth-of-type(5):before { content: "DONDERDAG / THURSDAY"; }
     td:nth-of-type(6):before { content: "VRIJDAG / FRIDAY"; }
+    
+    */
+
 }
 
 table {
